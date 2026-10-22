@@ -6,7 +6,15 @@
 /*   By: aait-bih <aait-bih@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 15:04:34 by aait-bih          #+#    #+#             */
-/*   Updated: 2026/10/14 15:04:35 by aait-bih         ###   ########.fr       */
+/*   Updated: 2026/10/15 15:14:43 by aait-bih         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+int	ft_isdigit(int c)
+{
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
+}

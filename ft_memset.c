@@ -1,4 +1,3 @@
-#include <stddef.h>
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -7,22 +6,23 @@
 /*   By: aait-bih <aait-bih@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 18:34:18 by aait-bih          #+#    #+#             */
-/*   Updated: 2026/10/14 18:36:36 by aait-bih         ###   ########.fr       */
+/*   Updated: 2026/10/19 12:18:34 by aait-bih         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<string.h>
-#include<stdio.h>
+#include "libft.h"
 
-void printArray(int arr[], int n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-   for (int i=0; i<n; i++)
-      printf("%d ", arr[i]);
-}
-
-
-int main(void)
-{
-    int binary_pattern = 0b100101100;
+    unsigned char *p;
     
+    *p = (unsigned char *)s;
+    while (n > 0)
+    {
+        *p = (unsigned char)c;
+        n--;
+        p++;
+    }
+
+    return (s);
 }

@@ -6,9 +6,11 @@
 /*   By: aait-bih <aait-bih@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 14:15:09 by aait-bih          #+#    #+#             */
-/*   Updated: 2026/10/14 14:23:45 by aait-bih         ###   ########.fr       */
+/*   Updated: 2026/10/19 11:52:03 by aait-bih         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int ft_tolower(int  c)
 {
@@ -19,9 +21,3 @@ int ft_tolower(int  c)
     return c;
 }
 
-#include<stdio.h>
-
-int main(void)
-{
-    printf("%c", ft_tolower('a'));
-}
