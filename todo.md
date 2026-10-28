@@ -1,0 +1,1 @@
+todo: join , split, itoa, ft_strmapi, ft_striteri, ft_lstmap
