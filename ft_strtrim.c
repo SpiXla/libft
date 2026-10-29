@@ -6,21 +6,11 @@
 /*   By: aait-bih <aait-bih@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 14:30:17 by aait-bih          #+#    #+#             */
-/*   Updated: 2026/10/20 15:25:55 by aait-bih         ###   ########.fr       */
+/*   Updated: 2026/10/29 11:20:29 by aait-bih         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-
-int strlne(const char *s)
-{
-    int i;
-    i = 0;
-    while (s[i])
-        i++;
-    return i;
-}
 
 int ft_contains(char c, char const *set)
 {
@@ -45,7 +35,7 @@ char *ft_strtrim(char const *s1, char const *set)
     
     i = 0;
     j = 0;
-    len = strlne(s1) - 1;
+    len = ft_strlen(s1) - 1;
     i2 = 0;
     while (ft_contains(s1[i], set))
     {

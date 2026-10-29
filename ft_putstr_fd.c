@@ -6,7 +6,7 @@
 /*   By: aait-bih <aait-bih@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/28 16:24:39 by aait-bih          #+#    #+#             */
-/*   Updated: 2026/10/28 16:26:21 by aait-bih         ###   ########.fr       */
+/*   Updated: 2026/10/29 12:51:13 by aait-bih         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void ft_putstr_fd(char *s, int fd)
 {
     int i;
 
+    if (!s || fd < 0)
+        return ;
     i = 0;
     while (s[i])
     {
