@@ -62,11 +62,17 @@ static void	free_array(char **array, int index)
 	free(array);
 }
 
+int	word_end(char const *s, int i, char c)
+{
+	while (s[i] && s[i] != c)
+		i++;
+	return (i);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
 	int		i;
-	int		start;
 	int		j;
 
 	if (!s)
@@ -78,20 +84,14 @@ char	**ft_split(char const *s, char c)
 	j = 0;
 	while (s[i])
 	{
-		while (s[i] && s[i] == c)
+		while (s[i] == c)
 			i++;
-		start = i;
-		while (s[i] && s[i] != c)
-			i++;
-		if (i > start)
+		if (s[i])
 		{
-			result[j] = get_word(s, start, i);
-			if (!result[j])
-			{
-				free_array(result, j);
-				return (NULL);
-			}
-			j++;
+			result[j] = get_word(s, i, word_end(s, i, c));
+			if (!result[j++])
+				return (free_array(result, j - 1), NULL);
+			i = word_end(s, i, c);
 		}
 	}
 	result[j] = NULL;

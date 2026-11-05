@@ -6,31 +6,39 @@
 /*   By: aait-bih <aait-bih@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/28 15:40:05 by aait-bih          #+#    #+#             */
-/*   Updated: 2026/10/28 16:12:53 by aait-bih         ###   ########.fr       */
+/*   Updated: 2026/11/05 22:13:25 by aait-bih         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+#include "libft.h"
+
+char    *ft_substr(char const *s, unsigned int start, size_t len)
 {
     size_t  i;
     size_t  j;
     char    *str;
 
+    if (!s)
+        return (NULL);
     if (start >= ft_strlen(s))
-		return (ft_strdup(""));
+        return (ft_strdup(""));
     if (len > ft_strlen(s) - start)
-		len = ft_strlen(s) - start;
+        len = ft_strlen(s) - start;
+
+    str = malloc(len + 1);
+    if (!str)
+        return (NULL);
+
     i = (size_t)start;
     j = 0;
-    str = malloc(ft_strlen(s) + 1);
-    while (j < len && i < ft_strlen(s))
+    while (j < len && s[i])
     {
         str[j] = s[i];
         i++;
         j++;
     }
-    str[i] = '\0';
-	return (str);
+    str[j] = '\0';
+    return (str);
 }

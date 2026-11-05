@@ -6,16 +6,18 @@
 /*   By: aait-bih <aait-bih@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 23:10:03 by aait-bih          #+#    #+#             */
-/*   Updated: 2026/10/28 00:05:14 by aait-bih         ###   ########.fr       */
+/*   Updated: 2026/11/05 22:11:08 by aait-bih         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-    unsigned char	*res;
+	unsigned char	*res;
 
+	if (nmemb != 0 && size > SIZE_MAX / nmemb)
+        return (NULL);
 	if (nmemb == 0 || size == 0)
 		return (malloc(0));
 	res = malloc(nmemb * size);

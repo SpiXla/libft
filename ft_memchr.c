@@ -14,18 +14,18 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-    const unsigned char *source;
-    unsigned char target;
-    size_t  i;
+	unsigned char	*source;
+	unsigned char	target;
+	size_t			i;
 
-    i = 0;
-    source = (const unsigned char *)s;
-    target = (unsigned char)c;
-    while (i < n)
-    {
-        if (source[i] == target)
-            return (source + i);
-        i++;
-    }
-    return (NULL);
+	i = 0;
+	source = (unsigned char *)s;
+	target = (unsigned char)c;
+	while (i < n)
+	{
+		if (source[i] == target)
+			return (source + i);
+		i++;
+	}
+	return (NULL);
 }

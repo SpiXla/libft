@@ -1,1 +1,0 @@
-todo: ft_striteri, ft_lstmap
