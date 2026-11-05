@@ -6,12 +6,11 @@
 /*   By: aait-bih <aait-bih@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 14:30:17 by aait-bih          #+#    #+#             */
-/*   Updated: 2026/10/20 15:25:55 by aait-bih         ###   ########.fr       */
+/*   Updated: 2026/11/05 23:53:31 by aait-bih         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 int	ft_contains(char c, char const *set)
 {
