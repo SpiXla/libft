@@ -6,7 +6,7 @@
 /*   By: aait-bih <aait-bih@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 19:21:08 by aait-bih          #+#    #+#             */
-/*   Updated: 2026/10/26 20:20:04 by aait-bih         ###   ########.fr       */
+/*   Updated: 2026/11/07 23:37:38 by aait-bih         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	if (!*little)
 		return ((char *)big);
 	i = 0;
-	while (big[i] && i < len)
+	while (i < len && big[i])
 	{
 		j = 0;
 		while (big[i + j] && little[j] && (i + j) < len

@@ -6,7 +6,7 @@
 /*   By: aait-bih <aait-bih@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 16:31:30 by aait-bih          #+#    #+#             */
-/*   Updated: 2026/10/23 16:39:43 by aait-bih         ###   ########.fr       */
+/*   Updated: 2026/11/07 23:47:16 by aait-bih         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*tmp;
 
-	if (*lst == NULL || lst == NULL)
+	if (!lst || !del)
 		return ;
-	while (*lst != NULL)
+	while (*lst)
 	{
 		tmp = (*lst)->next;
 		ft_lstdelone(*lst, del);

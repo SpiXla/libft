@@ -6,7 +6,7 @@
 /*   By: aait-bih <aait-bih@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/05 22:04:10 by aait-bih          #+#    #+#             */
-/*   Updated: 2026/11/05 22:56:19 by aait-bih         ###   ########.fr       */
+/*   Updated: 2026/11/07 23:46:49 by aait-bih         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_elem;
 	void	*content;
 
-	if (!lst || !f || !del)
+	if (!f || !del)
 		return (NULL);
 	new_list = NULL;
 	while (lst)
