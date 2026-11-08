@@ -62,7 +62,7 @@ static void	free_array(char **array, int index)
 	free(array);
 }
 
-int	word_end(char const *s, int i, char c)
+static int	word_end(char const *s, int i, char c)
 {
 	while (s[i] && s[i] != c)
 		i++;
